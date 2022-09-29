@@ -48,9 +48,9 @@ class Director:
         Args:
             self (Director): An instance of Director.       
         """
+        self._terminal_service.write_text("")
         for i in range(len(self._jumper.parachute)):
             self._terminal_service.write_text(self._jumper.parachute[i])
-        self._terminal_service.write_text("")
     
     def _show_puzzle(self):
         """Shows the puzzle to the user.
@@ -81,7 +81,7 @@ class Director:
             self._jumper_level += 1
         
     def _check_for_winner(self):
-        """Lets director know the puzzle has been solved.
+        """Lets director know if the puzzle has been solved.
 
         Args:
             self (Director): An instance of Director.
@@ -95,5 +95,7 @@ class Director:
             if self._jumper_level == 5:
                 self._show_jumper()
                 self._show_puzzle()
+                self._terminal_service.write_text('')
                 self._terminal_service.write_text('You\'ve used up all your guesses. Your parachute is gone.')
+                self._terminal_service.write_text('')
                 self._is_playing = False

@@ -1,6 +1,8 @@
 # Jumper
-Have fun guessing secret words! Jump from a plain with a parachute
+Have fun guessing secret words! Jump from a plane with a parachute
 that loses a portion of itself for every letter guessed wrong. <i>Jumper</i> 
+Guess the word and safely make it to the ground (maybe at higher velocity
+with your canopy missing and hanging on by a thread!)
 
 ---
 ## Getting Started

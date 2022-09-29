@@ -52,5 +52,5 @@ class Jumper:
         self.parachute.pop(0)
         self._parachute_level += 1
         if self._parachute_level == 5:
-            self.parachute[0] = '  x  '
+            self.parachute[0] = '   x'
 

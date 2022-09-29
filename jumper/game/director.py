@@ -39,7 +39,7 @@ class Director:
         while self._is_playing:
             self._show_puzzle()
             self._show_jumper()
-            self._get_inputs()
+            self._get_guess()
             self._do_updates()
             self._check_for_winner()
     
@@ -60,7 +60,7 @@ class Director:
         self._terminal_service.write_text("")
         self._terminal_service.write_text(self._puzzle.reveal_puzzle())
 
-    def _get_inputs(self):
+    def _get_guess(self):
         """Gets the jumpers latest guess.
 
         Args:
@@ -89,7 +89,9 @@ class Director:
         if self._puzzle.puzzle_solved():
             self._show_jumper()
             self._show_puzzle()
+            self._terminal_service.write_text('')
             self._terminal_service.write_text('Congratulations! You found the secret word!')
+            self._terminal_service.write_text('')
             self._is_playing = False
         else:
             if self._jumper_level == 5:
